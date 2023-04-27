@@ -1,9 +1,16 @@
+# This script must be run via ShareGate Powershell...
+# Modify the following three variables to the approporiate setting
+# The two tenant names below should be the tenantname that matches your Sharepoint Admin URL
+# For example, if it's https://mysourcecompany-admin.sharepoint.com then set the first variable to "mysourcecompany"
+$srcTenantName = "SOURCETENANT"
+$destTenantName = "DESTINATIONTENANT"
+$csvFile = "C:\PATH\TO\CSV\UsersList.csv"
+
 Import-Module ShareGate
-$csvFile = "C:\CSV\CopySites.csv"
 $table = Import-Csv $csvFile -Delimiter ","
 
-$srcSiteConnection = Connect-Site -Url https://.sharepoint.com/ -Browser
-$dstSiteConnection = Connect-Site -Url https://.sharepoint.com/ -Browser
+$srcSiteConnection = Connect-Site -Url https://$srcTenantName-admin.sharepoint.com -Browser
+$dstSiteConnection = Connect-Site -Url https://$dstTenantName-admin.sharepoint.com -Browser
 
 Set-Variable srcSite, dstSite
 
