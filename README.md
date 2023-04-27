@@ -1,4 +1,6 @@
-# od4b.migration-sharegate
+# Forked From: od4b.migration-sharegate
+# Modified by MJPComp to fix some text strings, and change authentication for MFA secured accounts
+# Note: OD4B = OneDrive for Business
 
 ![Version]
 ![Language]
@@ -76,7 +78,7 @@ Default value | `None`
 
 #### SourceSpoAdminUpn `<String>`
 
-The upn of the SharePoint Online Administrator of the source tenant. This parameter is mandotory when you are not using the parameter `SourceCredential`.
+The upn of the SharePoint Online Administrator of the source tenant. This parameter is mandatory when you are not using the parameter `SourceCredential`.
 
 Description | Value
 -- | --
@@ -85,7 +87,7 @@ Default value | `None`
 
 #### DestinationSpoAdminUpn `<String>`
 
-The upn of the SharePoint Online Administrator of the destination tenant. This parameter is mandotory when you are not using the parameter `DestinationCredential`.
+The upn of the SharePoint Online Administrator of the destination tenant. This parameter is mandatory when you are not using the parameter `DestinationCredential`.
 
 Description | Value
 -- | --
@@ -94,7 +96,7 @@ Default value | `None`
 
 #### SourceCredential  `<PSCredential>`
 
-Credential of the SharePoint Online Administrator of the source tenant. This parameter is mandotory when you are not using the parameter `SourceSpoAdminUpn`.
+Credential of the SharePoint Online Administrator of the source tenant. This parameter is mandatory when you are not using the parameter `SourceSpoAdminUpn`.
 
 Description | Value
 -- | --
@@ -103,7 +105,7 @@ Default value | `None`
 
 #### DestinationCredential  `<PSCredential>`
 
-Credential of the SharePoint Online Administrator of the destination tenant. This parameter is mandotory when you are not using the parameter `DestinationSpoAdminUpn`.
+Credential of the SharePoint Online Administrator of the destination tenant. This parameter is mandatory when you are not using the parameter `DestinationSpoAdminUpn`.
 
 Description | Value
 -- | --
@@ -130,7 +132,7 @@ Default value | `None`
 
 #### IsSiteCollectionAdminOnSource `<bool>`
 
-Parameter is needed to add the SharePoint Online Administrator to all sources. If this is already done the parmater must be set to `$false`.
+Parameter is needed to add the SharePoint Online Administrator to all sources. If this is already done the paramater must be set to `$false`.
 
 Description | Value
 -- | --
@@ -139,7 +141,7 @@ Default value | `$true`
 
 #### IsSiteCollectionAdminOnDestination `<bool>`
 
-Parameter is needed to add the SharePoint Online Administrator to all destinations. If this is already done the parmater must be set to `$false`.
+Parameter is needed to add the SharePoint Online Administrator to all destinations. If this is already done the paramater must be set to `$false`.
 
 Description | Value
 -- | --
@@ -158,6 +160,7 @@ We use SemVer for versioning.
 ## Authors
 
 Stefan Gericke - *Initial work* - <stefan@gericke.name>
+MJPComp - Modifications to authentication and spelling
 
 
 ## Articles
