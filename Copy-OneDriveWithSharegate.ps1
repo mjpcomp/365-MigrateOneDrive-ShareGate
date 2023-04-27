@@ -194,7 +194,7 @@ else {
     exit
 }
 
-# if credential not sent as paramater
+# if credential not sent as parameter
 if ($PsCmdlet.ParameterSetName -ne "Credential") {
     $SourceCredential = Get-Credential -Message "SharePoint Online Administrator SOURCE tenant" -UserName $SourceSpoAdminUpn
     $DestinationCredential = Get-Credential -Message "SharePoint Online Administrator TARGET tenant" -UserName $DestinationSpoAdminUpn
