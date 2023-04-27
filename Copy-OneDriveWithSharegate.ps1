@@ -196,8 +196,8 @@ else {
 
 # if credential not sent as paramater
 if ($PsCmdlet.ParameterSetName -ne "Credential") {
-    $SourceCredential = Get-Credential -Message "SharePoint Online Administrator source tenant" -UserName $SourceSpoAdminUpn
-    $DestinationCredential = Get-Credential -Message "SharePoint Online Administrator source tenant" -UserName $DestinationSpoAdminUpn
+    $SourceCredential = Get-Credential -Message "SharePoint Online Administrator SOURCE tenant" -UserName $SourceSpoAdminUpn
+    $DestinationCredential = Get-Credential -Message "SharePoint Online Administrator TARGET tenant" -UserName $DestinationSpoAdminUpn
 }
 
 # Service account must be added to each OneDrive storage in the source
@@ -243,7 +243,7 @@ foreach ($row in $table) {
         $dstList = Get-List -Site $dstSite -Name "Documents"
         if (($null -eq $srcList) -or ($null -eq $dstList)) {
             # Not all targets are loaded
-            Write-Log "Source and / or destination is not loaded correctly!" -LogFile $logFile -LogLevel Error
+            Write-Log "Source and/or destination is not loaded correctly!" -LogFile $logFile -LogLevel Error
             Write-Log "Continue with next line ..." -LogFile $logFile -LogLevel Warn
             continue
         }
