@@ -3,7 +3,7 @@
 # The two tenant names below should be the tenantname that matches your Sharepoint Admin URL
 # For example, if it's https://mysourcecompany-admin.sharepoint.com then set the first variable to "mysourcecompany"
 $srcTenantName = "SOURCETENANT"
-$destTenantName = "DESTINATIONTENANT"
+$dstTenantName = "DESTINATIONTENANT"
 $csvFile = "C:\PATH\TO\CSV\UsersList.csv"
 
 Import-Module ShareGate
